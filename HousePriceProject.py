@@ -344,7 +344,7 @@ elif page == "📊 Dashboard":
         )
 
         fig.update_layout(
-            plot_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,255,0.5)',
             paper_bgcolor='rgba(0,0,0,0)',
             font_color='white'
         )
