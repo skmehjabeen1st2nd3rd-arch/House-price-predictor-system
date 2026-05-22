@@ -344,9 +344,9 @@ elif page == "📊 Dashboard":
         )
 
         fig.update_layout(
-            plot_bgcolor='rgba(0,0,255,0.5)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            font_color='white'
+            plot_bgcolor='white',
+            paper_bgcolor='white',
+            font_color='black'
         )
 
         st.plotly_chart(fig, width='stretch')
@@ -360,8 +360,8 @@ elif page == "📊 Dashboard":
         )
 
         fig2.update_layout(
-            paper_bgcolor='rgba(0,0,0,0)',
-            font_color='white'
+            paper_bgcolor='white',
+            font_color='black'
         )
 
         st.plotly_chart(fig2, width='stretch')
@@ -428,7 +428,7 @@ elif page == "💰 Prediction":
             padding:35px;
             border-radius:20px;
             text-align:center;
-            color:white;
+            color: black;
             font-size:38px;
             font-weight:bold;
             margin-top:20px;
