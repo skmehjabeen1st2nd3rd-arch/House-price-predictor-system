@@ -78,7 +78,7 @@ section[data-testid="stSidebar"]{
     text-align:center;
     font-size:60px;
     font-weight:bold;
-    color:white;
+    color:black;
 }
 
 /* SUBTITLE */
@@ -86,7 +86,7 @@ section[data-testid="stSidebar"]{
 .subtitle{
     text-align:center;
     font-size:22px;
-    color:white;
+    color:black;
 }
 
 /* GLASS CARDS */
@@ -114,7 +114,7 @@ section[data-testid="stSidebar"]{
 div.stButton > button{
     width:100%;
     background: linear-gradient(90deg,#ff6a00,#ff006e);
-    color:white;
+    color:black;
     border:none;
     border-radius:14px;
     height:55px;
