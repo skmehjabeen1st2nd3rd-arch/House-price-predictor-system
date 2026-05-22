@@ -33,27 +33,43 @@ st.set_page_config(
 # ============================================
 # CUSTOM CSS
 # ============================================
-
 st.markdown("""
 <style>
 
-/* MAIN BACKGROUND */
+/* FULL APP BACKGROUND */
+
+html, body, [class*="css"]  {
+    background: linear-gradient(135deg,#ffe0c3,#ffd6e8,#fff5f5);
+    color: black;
+}
+
+/* STREAMLIT MAIN CONTAINER */
 
 [data-testid="stAppViewContainer"]{
-    background: linear-gradient(135deg,#f8fafc,#e2e8f0,#cbd5e1);
-    color:black;
+    background: linear-gradient(135deg,#ffe0c3,#ffd6e8,#fff5f5);
 }
 
 /* MAIN CONTENT */
 
 .main .block-container{
     padding-top:2rem;
+    background: transparent;
 }
 
 /* SIDEBAR */
 
 section[data-testid="stSidebar"]{
-    background: linear-gradient(180deg,#ffffff,#dbeafe);
+    background: linear-gradient(180deg,#fff1f2,#ffe4e6);
+}
+
+/* HERO SECTION */
+
+.hero{
+    padding:45px;
+    border-radius:25px;
+    background: linear-gradient(135deg,#ff6a00,#ee0979);
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    margin-bottom:30px;
 }
 
 /* TITLE */
@@ -73,44 +89,31 @@ section[data-testid="stSidebar"]{
     color:white;
 }
 
-/* HERO SECTION */
-
-.hero{
-    padding:45px;
-    border-radius:25px;
-    background: linear-gradient(135deg,#ff6a00,#ee0979);
-    box-shadow:0 10px 35px rgba(0,0,0,0.2);
-    margin-bottom:30px;
-}
-
-/* CARDS */
+/* GLASS CARDS */
 
 .card{
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.6);
     padding:20px;
     border-radius:20px;
-    backdrop-filter: blur(12px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
     margin-bottom:20px;
-    border:1px solid rgba(255,255,255,0.3);
 }
 
 /* METRICS */
 
 [data-testid="stMetric"]{
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.7);
     padding:20px;
     border-radius:18px;
-    text-align:center;
     border:1px solid rgba(0,0,0,0.05);
-    color:black;
 }
 
 /* BUTTON */
 
 div.stButton > button{
     width:100%;
-    background: linear-gradient(90deg,#ff6a00,#ffb703);
+    background: linear-gradient(90deg,#ff6a00,#ff006e);
     color:white;
     border:none;
     border-radius:14px;
@@ -122,18 +125,37 @@ div.stButton > button{
 /* BUTTON HOVER */
 
 div.stButton > button:hover{
-    transform:scale(1.03);
-    background: linear-gradient(90deg,#ee0979,#ff6a00);
+    transform:scale(1.02);
 }
 
-/* REMOVE FOOTER */
+/* REMOVE STREAMLIT FOOTER */
 
 footer{
     visibility:hidden;
 }
 
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .main-title{
+        font-size:38px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .hero{
+        padding:25px;
+    }
+
+}
+
 </style>
 """, unsafe_allow_html=True)
+
+
 
 # ============================================
 # SIDEBAR
